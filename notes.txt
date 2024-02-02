@@ -1,0 +1,79 @@
+What is a Model?
+Answer:
+A model represent our tables.
+Meaning that we can interact (read, insert, update, delete) using the model class.
+
+Where is it located? It is located in this path: App\Models\~
+
+===========================================================================================
+
+Categories tables
+    Category ID                 Category Name
+        1                           Travel
+        2                           Food
+        3                           Lifestyle
+        4                           Technology
+        5                           Career
+        6                           Movie
+
+Posts tables
+
+USER CREATED A POST
+Post ID             Post Title                      Categories
+------------------------------------------------------------------
+1                   My Trip To Maldives             Travel (1), career (5), lifestyle(3)
+2                   I Love Eating Food              Food (2), Lifestyle(3)
+3                   I Like To Watch Sci-Fi Movies   Movie(6), Lifestyle(3), Technology(4)
+
+Many To Many relationship ( hasMany() ) method relationship
+
+PIVOT Table (will hold the Post IDs and the Category IDs)
+Category_Post Table (Pivot Table)
+Poat_id         Category_id
+1                   1
+1                   5
+1                   3
+2                   2
+2                   3
+3                   6
+3                   4
+3                   3
+
+===============================================================================================
+
+Note: To continue on the category_post
+
+=================================================
+Colloborative Project
+
+    Note:
+Modify the scrollbar
+in the show.blade.php
+
+
+===============================================================================================
+What is a middleware?
+Answer: is a mechanism that is use for inspecting filtering HTTP request entering the application.
+If the user is not authenticated (not logged-in), then they cannot enter our application.
+Think of the MIDDLEWARE as a layer of security that inspect/examins the request of an application.
+
+Goal: Create our own middleware : AdminMiddleware
+Purpose: The AdminMiddleware will allow or deny access to the admin pages.
+Basis: Our basis is the role_id.
+If the role_id is 1, then that user can access the admin pages.
+
+GATE:
+What is gate?
+Answer:
+It is a simple
+mechanism
+that determines
+whether
+ a user is authorized to perform a certain action.
+
+*************************************************************
+SEEDER:
+What is a seeder?
+Seeding the database.
+    -> We want to populate our database table with default values.
+    
